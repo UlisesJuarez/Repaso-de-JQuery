@@ -40,3 +40,11 @@ $("h1").before("<button>Hello from jq</button>");
 $("h1").after("<button>Hi from jq</button>")
 $("h1").prepend("<button>i'm prepend</button>");
 $("h1").append("<button>i'm append</button>");
+
+$(".hide-input").text("Toggle input");
+$(".hide-input").on("click",function(){
+    // can use slideUp() slideDown() slideToggle() animate({opacity:0.5})
+    $("input").toggle();
+    //only css properties with numeric values
+    $("h1").slideUp().slideDown().animate({opacity:0.5})
+});
